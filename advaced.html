@@ -1,0 +1,76 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Gelişmiş Arama</title>
+<script type="text/javascript" src="database.js"></script>        
+</head>   
+<body>
+<style>
+    body{text-align: center;}    
+</style>    
+<h1>Gelişmiş Arama Seçeneği</h1> 
+    <br></br>
+    <h2>Yazar Adı veya Konu Giriniz</h2>
+
+    <input type="text" id="yazi" autofocus maxlength="25" size="40" />
+
+<button onclick="tara()">ARA</button>
+<button class="buton" onclick="location.reload();">Yeni Arama</button>
+    <br></br>
+<h3> Arama Secenekleri</h3> 
+<h5> Aradığınız Dili Seçiniz (doldurulması zorunlu alan)</h5> 
+<form>
+<input type="radio" name="Dil: " value="turkey" /> Türkçe    
+<input type="radio" name="Dil: " value="english" /> İngilizce
+</form>
+
+
+<script>
+function tara()
+     {
+       var language= document.forms[0];
+       var gelen = document.getElementById("yazi").value;
+       
+          for(var i=0;i<20;i++)
+  {
+        if(catalog[i].itemAuthor.toLowerCase().indexOf(gelen.toLowerCase())!=-1 || catalog[i].itemDescription.toLowerCase().indexOf(gelen.toLowerCase())!=-1)
+    {    
+        if(language[0].checked && catalog[i].itemLanguage=="Türkçe")
+        {
+           
+            document.getElementById("sonuc").innerHTML += "<p>" +"<img src='" + catalog[i].itemimage + "' height='125' width='85'/><br>" + "<strong>" + catalog[i].itemName + "</strong><br>" + 
+     catalog[i].itemAuthor + "<br>" + "Yayınevi: " + catalog[i].itemPublisher + "<br>" + catalog[i].itemDescription +"Dili: " + catalog[i].itemLanguage + "<br>" + "Sayfa Sayısı: " + 
+     catalog[i].itemNumberofpages + "<br>" + "Yayın Yılı: " + catalog[i].itemCreationDate + "<hr>" + "</p>";     
+        } 
+    
+        
+        else if(language[1].checked && catalog[i].itemLanguage=="İngilizce")
+        {
+            document.getElementById("sonuc").innerHTML += "<p>" +"<img src='" + catalog[i].itemimage + "' height='125' width='85'/><br>" + "<strong>" + catalog[i].itemName + "</strong><br>" + 
+     catalog[i].itemAuthor + "<br>" + "Yayınevi: " + catalog[i].itemPublisher + "<br>" + catalog[i].itemDescription +"Dili: " + catalog[i].itemLanguage + "<br>" + "Sayfa Sayısı: " + 
+     catalog[i].itemNumberofpages + "<br>" + "Yayın Yılı: " + catalog[i].itemCreationDate + "<hr>" + "</p>";
+        } 
+      
+     }
+  }
+         
+     
+     
+     }
+
+    
+    function kontrol ()
+    {
+        
+        
+        
+        
+    }
+    
+    
+    
+</script>
+<p id="sonuc" ></p>
+</body>
+
+</html>

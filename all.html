@@ -10,8 +10,9 @@
 <script>
     for(var i=0;i<20;i++)
     {
-     document.getElementById("goster").innerHTML += "<p>" +"<img src='" + catalog[i].itemimage + "' height='125' width='85'/><br>" + "<strong>" + catalog[i].itemName + "</strong><br>" + catalog[i].itemAuthor + "<br>" + catalog[i].itemDescription + "</p>";
-        
+     document.getElementById("goster").innerHTML += "<p>" +"<img src='" + catalog[i].itemimage + "' height='125' width='85'/><br>" + "<strong>" + catalog[i].itemName + "</strong><br>" + 
+     catalog[i].itemAuthor + "<br>" + "Yayınevi: " + catalog[i].itemPublisher + "<br>" + catalog[i].itemDescription +"Dili: " + catalog[i].itemLanguage + "<br>" + "Sayfa Sayısı: " + 
+     catalog[i].itemNumberofpages + "<br>" + "Yayın Yılı: " + catalog[i].itemCreationDate + "<hr>" + "</p>";    
     }
     
 </script>
