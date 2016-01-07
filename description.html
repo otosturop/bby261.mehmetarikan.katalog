@@ -5,6 +5,12 @@
     <script type="text/javascript" src="database.js"></script>
 </head>
 <body>
+       <style>
+    body
+{
+    background-color: #CCCCFF;
+}
+    </style>
 <center>   
 <h1>KONU İLE ARAMA BÖLÜMÜ</h1> 
     <br></br>    
@@ -34,6 +40,8 @@ for(var i=0;i<20;i++)
     
     }
 }
+    if(document.getElementById("sonuc").innerHTML==""){
+    document.getElementById("sonuc").innerHTML="<strong>" + "Arama kriterlerine uygun sonuç bulunamadı." + "</strong>"}
 }
 </script>    
 <p id="sonuc"></p>    

@@ -5,9 +5,13 @@
 <script type="text/javascript" src="database.js"></script>        
 </head>   
 <body>
-<style>
-    body{text-align: center;}    
-</style>    
+       <style>
+    body
+{
+    background-color: #CCCCFF;
+}
+    </style>
+<center>
 <h1>Gelişmiş Arama Seçeneği</h1> 
     <br></br>
     <h2>Yazar Adı veya Konu Giriniz</h2>
@@ -23,7 +27,7 @@
 <input type="radio" name="Dil: " value="turkey" /> Türkçe    
 <input type="radio" name="Dil: " value="english" /> İngilizce
 </form>
-
+</center>
 
 <script>
 function tara()
@@ -54,18 +58,11 @@ function tara()
      }
   }
          
-     
+     if(document.getElementById("sonuc").innerHTML==""){
+    document.getElementById("sonuc").innerHTML= "<strong>" + "Arama kriterlerine uygun sonuç bulunamadı." + "</strong>"}
      
      }
 
-    
-    function kontrol ()
-    {
-        
-        
-        
-        
-    }
     
     
     

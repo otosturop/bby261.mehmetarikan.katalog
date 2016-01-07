@@ -5,6 +5,12 @@
     <script type="text/javascript" src="database.js"></script>
 </head>
 <body>
+       <style>
+    body
+{
+    background-color: #CCCCFF;
+}
+    </style>
 <center>   
 <h1>KİTAP ADI İLE ARAMA BÖLÜMÜ</h1> 
     <br></br>    
@@ -28,9 +34,12 @@ for(var i=0;i<20;i++)
     {
      document.getElementById("sonuc").innerHTML += "<p>" +"<img src='" + catalog[i].itemimage + "' height='125' width='85'/><br>" + "<strong>" + catalog[i].itemName + "</strong><br>" + 
      catalog[i].itemAuthor + "<br>" + "Yayınevi: " + catalog[i].itemPublisher + "<br>" + catalog[i].itemDescription +"Dili: " + catalog[i].itemLanguage + "<br>" + "Sayfa Sayısı: " + 
-     catalog[i].itemNumberofpages + "<br>" + "Yayın Yılı: " + catalog[i].itemCreationDate + "<hr>" + "</p>"; 
+     catalog[i].itemNumberofpages + "<br>" + "Yayın Yılı: " + catalog[i].itemCreationDate + "<hr>" + "</p>";
     }
+      
   }
+if(document.getElementById("sonuc").innerHTML==""){
+    document.getElementById("sonuc").innerHTML="<strong>" + "Arama kriterlerine uygun sonuç bulunamadı." + "</strong>"}
 }
 </script>    
 <p id="sonuc"></p>    
